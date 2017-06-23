@@ -48,7 +48,7 @@ public class TokenResponse {
     this.expirationTime = now.getTime();
   }
   public String getAccessToken() {
-	System.out.println("tokencheck="+accessToken);  
+	//System.out.println("tokencheck="+accessToken);  
     return accessToken;
   }
   public void setAccessToken(String accessToken) {

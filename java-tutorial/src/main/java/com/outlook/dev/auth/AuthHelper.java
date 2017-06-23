@@ -124,6 +124,9 @@ public class AuthHelper {
 	  TokenService tokenService = retrofit.create(TokenService.class);
 
 	  try {
+		//TokenResponse tokenget =   tokenService.getAccessTokenFromAuthCode(tenantId, getAppId(), getAppPassword(), 
+		//	        "authorization_code", authCode, getRedirectUrl()).execute().body();
+		//System.out.println("get="+tokenget.getAccessToken());
 	    return tokenService.getAccessTokenFromAuthCode(tenantId, getAppId(), getAppPassword(), 
 	        "authorization_code", authCode, getRedirectUrl()).execute().body();
 	  } catch (IOException e) {
@@ -135,7 +138,7 @@ public class AuthHelper {
 	}
   public static TokenResponse ensureTokens(TokenResponse tokens, String tenantId) {
 	  // Are tokens still valid?
-	  System.out.println("token2="+tokens.getAccessToken());
+	  //System.out.println("token2="+tokens.getAccessToken());
 	  Calendar now = Calendar.getInstance();
 	  if (now.getTime().before(tokens.getExpirationTime())) {
 	    // Still valid, return them as-is

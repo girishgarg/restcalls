@@ -1,5 +1,5 @@
 com\outlook\dev\auth\TokenResponse.class
-com\outlook\dev\service\Recipient.class
 com\outlook\dev\service\EmailAddress.class
 com\outlook\dev\service\Message.class
+com\outlook\dev\service\Recipient.class
 com\outlook\dev\service\DateTimeTimeZone.class
